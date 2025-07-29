@@ -9,6 +9,9 @@ provider "vsphere" {
 module "servers" {
   
   source             = "./modules/servers"
+  providers = {
+    vsphere = vsphere
+  }
 
 
 }
